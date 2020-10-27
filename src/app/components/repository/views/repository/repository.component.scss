@@ -1,0 +1,225 @@
+@import '../../../../../scss/styles.scss';
+
+.repo-wrapper{
+  .topaddingtop{
+    padding-top: 66px;
+    .btn-back{
+      button{
+        background-color: #1da1f2;
+        padding: 8px 28px 8px 28px;
+        border: none;
+        border-radius: 8px;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        width: 163px;
+        margin-top: 12px;
+      }
+    }
+  }
+  background-color: $black-middle;
+  .repo-content-wrapper{
+    .content-wrapper{
+      margin-bottom: 28px;
+      border-radius: 16px;
+      border: 1px solid $white-color;
+      width: 100%;
+      .repo-title{
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        color: $white-color;
+        padding-top: 28px;
+        padding-bottom: 28px;
+        .profil{
+          span{
+            background-color: aliceblue;
+            padding: 5px 28px 5px 28px;
+            color: black;
+            border-radius: 24px;
+            float: left;
+            margin-left: 20px;
+            font-size: 16px;
+            font-weight: bold;
+            position: absolute;
+            right: 88%;
+            left: auto;
+            @media screen and(max-device-width: 1200px) {
+              right: calc(100% - 160px);
+            }
+          }
+        }
+      }
+      .repo-content{
+        border-top: 1px solid $grey-middle-color;
+        border-bottom: 1px solid $grey-middle-color;
+        padding: 12px;
+        .repo-profile{
+          display: inline-flex;
+          .profile-img{
+            display: inline-block;
+            position: relative;
+            width: 60px;
+            height: 60px;
+            overflow: hidden;
+            border-radius: 50%;
+            margin-left: 6px;
+            img{
+              width: auto;
+              height: 100%;
+            }
+          }
+          .profile-name{
+            color: $white-color;
+            font-size: 18px;
+            font-weight: bold;
+            margin-left: 12px;
+            margin-top: 16px;
+          }
+        }
+        .repo-count{
+          margin-left: 166px;
+          color: $white-color;
+          font-size: 16px;
+          display: flex;
+          padding: 17px;
+          @media screen and(max-device-width: 1200px) {
+            margin-left: calc(100% - 296px);
+          }
+          @media screen and(max-device-width: 991px) {
+            font-size: 12px;
+            margin-left: calc(100% - 224px);
+          }
+          @media screen and(max-device-width: 767px) {
+            margin-left: 0px;
+          }
+            .count-star{
+              display: flex;
+              .star-img{
+                img{
+                  width: 24px;
+                  height: 24px;
+                  @media screen and(max-device-width: 991px) {
+                    width: 16px;
+                    height: 16px;
+                    margin-top: -4px;
+                  }
+                }
+              }
+              .star-text{
+                margin-left: 10px;
+                margin-right: 22px;
+                @media screen and(max-device-width: 991px) {
+                  margin-left: 6px;
+                }
+              }
+            }
+            .count-view{
+              display: flex;
+              .view-img{
+                img{
+                  width: 24px;
+                  height: 24px;
+                  @media screen and(max-device-width: 991px) {
+                    width: 16px;
+                    height: 16px;
+                    margin-top: -4px;
+                  }
+                }
+              }
+              .view-text{
+                margin-left: 10px;
+                margin-right: 22px;
+                @media screen and(max-device-width: 991px) {
+                  margin-left: 6px;
+                }
+              }
+            }
+            .count-fork{
+              display: flex;
+              .fork-img{
+                img{
+                  width: 24px;
+                  height: 24px;
+                  @media screen and(max-device-width: 991px) {
+                    width: 16px;
+                    height: 16px;
+                    margin-top: -4px;
+                  }
+                }
+              }
+              .fork-text{
+                margin-left: 10px;
+                margin-right: 22px;
+                @media screen and(max-device-width: 991px) {
+                  margin-left: 6px;
+                }
+              }
+            }
+        }
+      }
+      .repo-desk{
+        @media screen and(max-device-width: 767px) {
+          margin-bottom: 20px;
+        }
+        .desk{
+          color: $white-color;
+          padding: 16px;
+          .lang{
+            font-size: 20px;
+            span{
+              font-size: 16px;
+            }
+          }
+          .size{
+            font-size: 20px;
+            span{
+              font-size: 16px;
+            }
+          }
+          .http{
+            font-size: 20px;
+            span{
+              font-size: 16px;
+            }
+          }
+          .desks{
+            font-size: 20px;
+            span{
+              font-size: 16px;
+            }
+          }
+        }
+        .tooltips{
+          button{
+            color: #ffffff;
+            font-size: 15px;
+            font-weight: normal;
+            border: none;
+            outline: none;
+            background-color: #1da1f2;
+            padding: 10px 31px 10px 31px;
+            border-radius: 6px;
+            margin-top: 20px;
+            margin-bottom: 15px;
+          }
+        }
+      }
+    }
+  }
+  .justify-content-center {
+    display: flex !important;
+    justify-content: center !important;
+}
+  .topaddingbot{
+    padding-top: 44px;
+  }
+}
+
+::ng-deep .tooltip-inner {
+  max-width: 500px;
+  text-align: left;
+  background-color: #fff;
+  color: #000;
+  box-shadow: 0 0 3px #fff;
+}

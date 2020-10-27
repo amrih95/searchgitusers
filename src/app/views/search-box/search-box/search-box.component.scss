@@ -1,0 +1,35 @@
+@import '../../../../scss/styles.scss';
+
+.search-wrapper{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    background-color: $black-middle;
+  .search-content{
+    margin-left: 134px;
+    margin-right: auto;
+    @media screen and(max-device-width: 1020px) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    button{
+      padding: 6px 22px 6px 22px;
+      color: $white-color;
+      font-weight: bold;
+    }
+    .search-title{
+      h2{
+        font-size: 24px;
+        color: rgb(29, 161, 242);
+        font-weight: bold;
+      }
+    }
+    // .btn-submit{
+    //   background-color: $green-color;
+    //   border: none;
+    // }
+  }
+}

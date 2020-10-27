@@ -1,0 +1,65 @@
+<!-- {{ profile$ | async | json }} -->
+
+<!-- <hr />
+<div *ngIf="profile$ | async as profile">
+  <p>nama: {{ profile.name }}</p>
+  <img src="{{ profile.avatar_url }}" alt="" style="max-width: 100px" />
+
+  <button (click)="handleOnRepo()">my repo</button>
+  <button (click)="handleOnBack()">back</button>
+</div> -->
+
+<div class="profil-wrapper" *ngIf="profile$ | async as profile">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="profil-content">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="content-wrapp">
+                <div class="content-img">
+                  <img src="{{ profile.avatar_url }}" alt=""/>
+                </div>
+                <div class="content-btn">
+                  <div class="btn-repo">
+                    <button (click)="handleOnRepo()">My repository</button>
+                  </div>
+                  <div class="btn-back">
+                    <button (click)="handleOnBack()">Back</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-8">
+              <div class="content-title">
+                Github Profile
+              </div>
+              <div class="content-desk">
+                <div class="desk-name">
+                  <label>Name:</label>
+                  <span>{{ profile.name }}</span>
+                </div>
+                <div class="desk-blog">
+                  <label>Blog:</label>
+                  <span>{{ profile.blog }}</span>
+                </div>
+                <div class="desk-follower">
+                  <label>follower:</label>
+                  <span>{{ profile.followers }}</span>
+                </div>
+                <div class="desk-following">
+                  <label>following:</label>
+                  <span>{{ profile.following }}</span>
+                </div>
+                <div class="desk-bio">
+                  <label>Bio:</label>
+                  <span>{{ profile.bio }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

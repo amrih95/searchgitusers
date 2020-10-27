@@ -1,0 +1,43 @@
+//variables
+$black-color: #1d1f23;
+$black2-color: #131319;
+$black3-color: #161619;
+$black-middle: #1d1f23;
+$white-color: #ffffff;
+$grey-dark-color: #979797;
+$grey-middle-color: #6a707d;
+$red-color: #d0021b;
+$green-color:#008000;
+$yellow-color: #ffc200;
+$regular-font: 'Montserrat';
+$bold-font: 'Montserrat-Bold';
+$black-font: 'Montserrat-Black';
+$semi-font: 'Montserrat-Semibold';
+
+$regular-font-secondary: 'Opensans-Regular';
+
+$asset-images-path : "/assets/images";
+
+
+$transition: all .3s ease-in-out;
+
+
+// text-align
+$align: left center right;
+
+// vertical-align
+$vertical-align: top middle bottom;
+
+// float
+$float: left right;
+
+// position
+$position: top right bottom left;
+
+// media-query
+$media-query: (laptop, (min-width: 1366px)),
+(desktop, (min-width: 1200px)),
+(wide, (min-width: 992px)),
+(tablet, (min-width: 768px) and (max-width: 991px)),
+(mobile, (max-width: 767px)),
+(small-mobile, (max-width: 360px));

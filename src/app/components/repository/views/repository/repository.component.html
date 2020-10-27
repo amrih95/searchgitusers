@@ -1,0 +1,116 @@
+<div class="repo-wrapper">
+  <div class="topaddingtop"></div>
+  <div class="repo-content-wrapper" *ngFor="let repo of repos$ | async">
+    <div class="container">
+      <div class="row">
+        <div class="content-wrapper">
+          <div class="repo-title">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="profil">
+                  <span>Profile</span>
+                </div>
+                My Repository
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="repo-content">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="repo-profile">
+                    <div class="profile-img">
+                      <img src="{{ repo.owner.avatar_url }}"/>
+                    </div>
+                    <div class="profile-name">
+                      <span>{{ repo.full_name }}</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="repo-count">
+                    <!-- <div class="count-content"> -->
+                      <div class="count-star">
+                        <div class="star-img">
+                          <img src="../../../../../assets/favourite.png"/>
+                        </div>
+                        <div class="star-text">
+                          {{repo.stargazers_count}}
+                        </div>
+                      </div>
+                      <div class="count-view">
+                        <div class="view-img">
+                          <img src="../../../../../assets/eye.png"/>
+                        </div>
+                        <div class="view-text">
+                          {{repo.watchers_count}}
+                        </div>
+                      </div>
+                      <div class="count-fork">
+                        <div class="fork-img">
+                          <img src="../../../../../assets/detour.png"/>
+                        </div>
+                        <div class="fork-text">
+                          {{repo.forks_count}}
+                        </div>
+                      </div>
+                    <!-- </div> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="repo-desk">
+              <div class="row">
+                <div class="col-md-8">
+                  <div class="desk">
+                    <div class="lang">
+                      Language :
+                      <span>{{repo.language ? repo.language : 'bahasa pemrogaman tidak ada'}}</span>
+                    </div>
+                    <div class="size">
+                      Size :
+                      <span>{{ repo.size }}</span>
+                    </div>
+                    <div class="http">
+                      Fetch url :
+                      <span>{{repo.forks_url}}</span>
+                    </div>
+                    <div class="desks">
+                      Deskripsi :
+                      <span>{{ repo.description ? repo.description : 'Description is not available for this project'}}</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="tooltips">
+                    <button type="button" placement="top" ngbTooltip="Star {{repo.stargazers_count}}">
+                      <b>Tooltip example</b>
+                    </button>
+                  </div>
+                  <div class="clonedownload">
+                    <div ngbDropdown class="d-inline-block">
+                      <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Clone or Download</button>
+                      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                        <button ngbDropdownItem (click)="handleOnClickClone()">Clone</button>
+                        <button ngbDropdownItem  *ngIf="repo.has_downloads" (click)="handleOnClicDownload()">Download</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 justify-content-center">
+    <ngb-pagination
+    [(page)]="currentPage"
+    [pageSize]="perPageSize"
+    [collectionSize]="collectionSize"
+    (pageChange)="handleOnPageChange($event)"
+  ></ngb-pagination>
+  </div>
+  <div class="topaddingbot"></div>
+</div>
